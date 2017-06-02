@@ -5,7 +5,7 @@
 [react-universal-ui-url]: https://npmjs.org/package/react-universal-ui
 
 ## Overview
-#### Reuse your React Native building block, [react-universal-ui](react-universal-ui) library to build our modern web-application. 
+#### Reuse your React Native building block, [react-universal-ui](react-universal-ui-url) library to build our modern web-application. 
 #### Powered by awesome Next.js with nicely designed server-side rendering, universal routing...
 
 ## Usage
