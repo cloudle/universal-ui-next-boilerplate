@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node server.js"
+    "start": "node server.js",
+    "pm2": "PORT=8080 pm2 start server.js",
+    "dev": "NODE_ENV=dev babel-node server.js",
+    "devtool": "NODE_ENV=dev USE_NEXT=false devtool -r babel-register server.js",
+    "build": "next build && webpack --config webpack.config.js --progress",
+    "prod": "npm run bundle && npm run start"
   },
   "keywords": [],
   "author": "",

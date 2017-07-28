@@ -1,27 +1,18 @@
 const express = require('express');
-const next = require('next');
-const moduleAlias = require('module-alias');
+const serverUtils = require('./serverUtils');
 
+const port = process.env.PORT || 3000;
 const dev = process.env.NODE_ENV !== 'production';
-const app = next({ dev });
-const handle = app.getRequestHandler();
+const useNextSSR = process.env.USE_NEXT !== 'false';
+const server = express();
 
-moduleAlias.addAlias('react-native', 'react-native-web');
+if (dev) serverUtils.watchAndHotInject();
 
-app.prepare()
-	.then(() => {
-		const server = express();
-
-		server.get('*', (req, res) => {
-			return handle(req, res);
-		});
-
-		server.listen(3000, (err) => {
+serverUtils.conditionallyInjectNextSSR(server, dev, useNextSSR).then((injectedServer) => {
+	if (module === require.main) {
+		injectedServer.listen(port, (err) => {
 			if (err) throw err;
-			console.log('> Ready on http://localhost:3000');
+			console.log(`Server is running under port ${port}`);
 		});
-	})
-	.catch((ex) => {
-		console.error(ex.stack);
-		process.exit(1);
-	});
+	}
+}).catch((ex) => { console.error(ex.stack); process.exit(1); });

@@ -17,6 +17,7 @@
     "no-unused-vars": "warn",
     "no-else-return": "off",
     "no-use-before-define": "off",
+    "no-useless-escape": "off",
     "arrow-body-style": "off",
     "one-var-declaration-per-line": "off",
     "import/no-extraneous-dependencies": "off",
