@@ -21,5 +21,4 @@ npm run dev
 - [x] Universal hot loader 
 - [x] React Universal UI library
 - [x] Ship with redux by default
-- [ ] React Native Vector Icons
-- [ ] Unit testing structure
+- [x] React Native Vector Icons
