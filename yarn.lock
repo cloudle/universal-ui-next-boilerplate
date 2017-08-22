@@ -4423,9 +4423,9 @@ react-transform-hmr@^1.0.4:
     global "^4.3.0"
     react-proxy "^1.1.7"
 
-react-universal-ui@^0.1.40:
-  version "0.1.40"
-  resolved "https://registry.yarnpkg.com/react-universal-ui/-/react-universal-ui-0.1.40.tgz#70d54cddc863040ba06808ba4a0ee0f1a47943ed"
+react-universal-ui@^0.1.48:
+  version "0.1.48"
+  resolved "https://registry.yarnpkg.com/react-universal-ui/-/react-universal-ui-0.1.48.tgz#287f28ceb2c88d9b3ed6eca0e627f2f70730f872"
   dependencies:
     react-native-drawer "^2.3.0"
     react-redux "^5.0.3"

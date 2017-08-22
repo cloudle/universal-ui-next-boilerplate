@@ -26,7 +26,7 @@
     "react-native-vector-icons": "github:cloudle/react-native-vector-icons#master",
     "react-native-web": "^0.0.120",
     "react-redux": "^5.0.5",
-    "react-universal-ui": "^0.1.40",
+    "react-universal-ui": "^0.1.48",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
     "style-loader": "^0.18.1",
